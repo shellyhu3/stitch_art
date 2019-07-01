@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gallery - Stitch Art</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'admin_app/style.css' %}">
+</head>
+
+<body>
+
+    <div id="nav">
+        <div id="user">
+
+            {% if this_user %}
+                Welcome Tracy! | 
+                <a href="/account">Manage Account</a> | 
+                <a href="/logout">logout</a>
+            {% endif %}
+        </div>
+        <div id="small_nav">
+            <img src="{% static 'admin_app/nav_icon.png' %}" alt="Nav Icon" id="nav_icon">
+            <div id="dropdown">
+                {% if this_user %}
+                    Welcome Tracy!
+                    <a href="/account">Manage Account</a>
+                    <a href="/logout">logout</a>
+                {% endif %}
+                <a href="/about">About</a>
+                <a href="/services">Services</a>
+                <a href="/shop">Shop</a>
+                <a href="/gallery">Gallery</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
+        <div id="links">
+            
+            <p id="home"><a href="/">Stitch Art</a></p>
+            <p><a href="/about">About</a></p>
+            <p><a href="/services">Services</a></p>
+            <p><a href="/shop">Shop</a></p>
+            <p><a href="/gallery">Gallery</a></p>
+            <p><a href="/contact">Contact</a></p>
+        </div>
+    </div>
+    <div id="container">
+        <div class="spacer"></div>
+        {% if this_user %}
+            <form action="/upload" method="post" enctype="multipart/form-data" id="img_upload">
+                {% csrf_token %}
+                <input type="file" name="image">
+                <button type="submit">Upload</button>
+                {% if messages %}
+                    {% for message in messages %}
+                        {% if message.extra_tags == "image" %}
+                            <p class="yellow">{{message}}</p>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            </form>
+
+
+            <div class="images">
+                {% for image in images reversed%}
+                <div class="image">
+                    <img src="{{ image.image }}" alt="{{image.image}}" class="img">
+                    <form action="/delete_img" method="post" class="delete_img">
+                        {% csrf_token %}
+                        <input type="hidden" name="image_id" value={{image.id}}>
+                        <input type="submit" value="Delete" class="delete_btn">
+                    </form>
+                </div>
+                {% endfor %}
+            </div>
+        {% else %}
+
+            <div class="images">
+                {% for image in images reversed%}
+                <img src="{{ image.image }}" alt="{{image.image}}" class="img">
+                {% endfor %}
+            </div>
+        {% endif %}
+
+    </div>
+</body>
+
+</html>

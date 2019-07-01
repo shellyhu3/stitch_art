@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home - Stitch Art</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'admin_app/style.css' %}">
+    <script src="{% static 'admin_app/script.js' %}"></script>
+</head>
+
+<body>
+
+    <div id="nav">
+        <div id="user">
+
+            {% if this_user %}
+                Welcome Tracy! | 
+                <a href="/account">Manage Account</a> | 
+                <a href="/logout">logout</a>
+            {% endif %}
+        </div>
+        <div id="small_nav">
+            <img src="{% static 'admin_app/nav_icon.png' %}" alt="Nav Icon" id="nav_icon">
+            <div id="dropdown">
+                <a href="/about">About</a>
+                <a href="/services">Services</a>
+                <a href="/shop">Shop</a>
+                <a href="/gallery">Gallery</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
+        <div id="links">
+            
+            <p id="home"><a href="/">Stitch Art</a></p>
+            <p><a href="/about">About</a></p>
+            <p><a href="/services">Services</a></p>
+            <p><a href="/shop">Shop</a></p>
+            <p><a href="/gallery">Gallery</a></p>
+            <p><a href="/contact">Contact</a></p>
+        </div>
+    </div>
+    <div id="container">
+        <div class="cursive" id="quote">
+            <div class="spacer"></div>
+            <p>Custom garments.</p>
+            <p>You think it...</p>
+            <p>...We make it</p>
+        </div>
+        <div id="ad">
+            <div>For you...</div>
+            <div>...your friends & family</div>
+            <div>...your business</div>
+            <div>...your team</div>
+            <div id="learn_more"><a href="/services">Learn More</a></div>
+        </div>
+        <div id="footer">
+            <div id="info">
+                <p>Questions? Need a quote?</p>
+                <p>Call us at <a href="tel:818-937-9828">(818) 937-9828</a> or email us at <a href="mailto:info@stitchartla.com">info@stitchartla.com</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

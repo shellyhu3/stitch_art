@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login - Stitch Art</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'admin_app/style.css' %}">
+</head>
+<body>
+    <div id="nav">
+        <div id="user">
+
+            {% if this_user %}
+                Welcome Tracy! | 
+                <a href="/account">Manage Account</a> | 
+                <a href="/logout">logout</a>
+            {% endif %}
+        </div>
+        <a href="/" id="home">Stitch Art</a>
+        <div id="links">
+            <a href="/about">About</a>
+            <a href="/services">Services</a>
+            <a href="/shop">Shop</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </div>
+    <div id="container">
+        <div class="spacer"></div>
+        <div class="login">
+            <h2>Login</h2>
+            {% if messages %}
+                {% for message in messages %}
+                    {% if message.extra_tags == "login" %}
+                        <p class="yellow">{{message}}</p>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            <form action="/process_login" method="post">
+                {% csrf_token %}
+                <p>Email: <br><input type="text" name="email" class="form-control"></p>
+                {% if messages %}
+                    {% for message in messages %}
+                        {% if message.extra_tags == "email2" %}
+                            <p class="error">{{message}}</p>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+                <p>Password: <br><input type="password" name="pw" class="form-control"></p>
+                <input type="submit" value="Log In" class="button">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
