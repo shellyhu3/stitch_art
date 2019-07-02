@@ -37,15 +37,6 @@ def logout(request):
     request.session.clear()
     return redirect('/')
 
-def about(request):
-    if 'user_id' in request.session:
-        context={
-            'this_user': User.objects.get(id=request.session['user_id'])
-        }
-        return render(request, "admin_app/about.html", context)
-    else:
-        return render(request, "admin_app/about.html")
-
 
 def services(request):
     if 'user_id' in request.session:

@@ -1,18 +1,15 @@
-window.onscroll = () => scrollFunction();
+$(document).on('scroll', () => scrollFunction());
 
-function scrollFunction(){
-    if (document.documentElement.scrollTop > 200){
-        document.getElementById('nav').style.background = 'rgb(73, 87, 104)';
-        document.getElementById('nav').style.height = '80px';
-        document.getElementById('home').style.fontSize = '50px';
-        // document.getElementById('home').style.gridColumn = '1/3';
-        // document.getElementById('links').style.gridTemplateColumns = 'repeat(7, 1fr)';
+function scrollFunction(){  
+    if ($(document).scrollTop() > 100){
+        $('#nav').removeClass('reg_nav');
+        $('#nav').addClass('scrolled_nav');
+        $('#bg_nav').removeClass('reg_nav_bg');
+        $('#bg_nav').addClass('scrolled_nav');
     } else{
-        document.getElementById('nav').style.background = 'url("/static/admin_app/thread.jpeg") no-repeat fixed';
-        document.getElementById('nav').style.backgroundSize = 'cover';
-        document.getElementById('nav').style.height = '120px';
-        document.getElementById('home').style.fontSize = '70px';
-        // document.getElementById('home').style.gridColumn = '1/-1';
-        // document.getElementById('links').style.gridTemplateColumns = 'repeat(5, 1fr)';
+        $('#nav').removeClass('scrolled_nav');
+        $('#nav').addClass('reg_nav');
+        $('#bg_nav').removeClass('scrolled_nav');
+        $('#bg_nav').addClass('reg_nav_bg');
     }
 }

@@ -5,10 +5,14 @@
     margin: 0px;
 }
 
-body{
+html, body{
+    background-color: rgb(73, 87, 104);
+    color: white;
+}
+
+#bg_img{
     background: url("/static/admin_app/thread.jpeg") no-repeat fixed;
     background-size: cover;
-    color: white;
     font-family: 'Merriweather', sans-serif;
     font-size: 0.85em;
 }
@@ -28,18 +32,53 @@ body{
 }
 
 #nav{
-    background: url("/static/admin_app/thread.jpeg") no-repeat fixed;
-    background-size: cover;
-    background-color: transparent;
     text-align: center;
     padding: 20px 0px;
     position: fixed;
     margin: 0px auto;
     width: 100%;
-    height: 80px;
     top: 0;
     z-index: 1;
-    transition: 1.5s;
+    transition: 0.4s;
+}
+
+#bg_nav{
+    text-align: center;
+    padding: 20px 0px;
+    position: fixed;
+    margin: 0px auto;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    transition: 0.4s;
+}
+
+.reg_nav_bg{
+    background: url("/static/admin_app/thread.jpeg") no-repeat fixed;
+    background-size: cover;
+    height: 80px;
+}
+
+.reg_nav_bg #home{
+    font-size: 70px;
+}
+
+.reg_nav{
+    background-color: rgb(73, 87, 104);
+    height: 80px;
+}
+
+.reg_nav #home{
+    font-size: 70px;
+}
+
+.scrolled_nav{
+    background-color: rgb(73, 87, 104);
+    height: 60px;
+}
+
+.scrolled_nav #home{
+    font-size: 50px;
 }
 
 a{
@@ -95,16 +134,13 @@ a:hover{
 
 #home{
     font-family: 'Alex Brush', cursive;
-    font-size: 70px;
-    /* padding-top: 20px; */
     margin: 0px;
     color: rgba(255, 255, 255, 0.856);
     display: inline-block;
     font-weight: normal;
     text-align: left;
     padding-left: 50px;
-    /* grid-column: 1/-1; */
-    /* transition: 1.5s; */
+    transition: 0.4s;
 }
 
 #quote{
@@ -116,7 +152,6 @@ a:hover{
     text-align: left;
     box-sizing: border-box;
     padding-top: 10%;
-    /* background-color: red; */
 }
 
 #quote p:nth-child(3){
@@ -131,48 +166,74 @@ a:hover{
 #ad{
     height: 600px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 50% 50%; */
-    position: relative;
+    align-items: center;
+    /* position: relative; */
     background-color: rgb(73, 87, 104);
 }
 
 
-/* #ad div:nth-child(1){
-    background: url("/static/admin_app/sash.jpg") no-repeat center;
-    background-size: 100%;
-}
-
-#ad div:nth-child(2){
-    background: url("/static/admin_app/stockings.jpg") no-repeat center;
-    background-size: 100%;
-}
-
-
-#ad div:nth-child(4){
-    background: url("/static/admin_app/baseball.jpg") no-repeat center;
-    background-size: 100%;
-} */
-
 #learn_more{
-    display: none;
+    display: inline-block;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    margin: 20px 30px;
+    background-color: rgba(0,0,0,0.09);
 }
-
-#ad:hover #learn_more{
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    line-height: 600px;
-}
-
 #learn_more a{
-    border: 1px solid white;
-    padding: 15px 30px;
+    display: block;
+    padding: 25px 80px;
+}
+#learn_more::before, #learn_more::after{
+    content:"";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #fff;
+}
+
+#learn_more a::before, #learn_more a::after{
+    content:"";
+    width:2px;
+    height:0;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #fff;
+}
+#learn_more:hover::before, #learn_more:hover::after{
+    width: 100%;
+}
+#learn_more:hover a::before, #learn_more:hover a::after{
+    height: 100%;
+}
+#learn_more::before, #learn_more::after{
+    transition-delay: 0.2s;
+}
+#learn_more a::before, #learn_more a::after{
+    transition-delay: 0s;
+}
+#learn_more::before{
+    right: 0;
+    top: 0;
+}
+#learn_more::after{
+    left: 0;
+    bottom: 0;
+}
+#learn_more a::before{
+    left: 0;
+    top: 0;
+}
+#learn_more a::after{
+    right: 0;
+    bottom: 0;
+}
+#learn_more:hover::before, #learn_more:hover::after{
+    transition-delay: 0s;
+}
+#learn_more:hover a::before, #learn_more:hover a::after{
+    transition-delay: 0.2s;
 }
 
 #about{
@@ -183,16 +244,16 @@ a:hover{
 
 #services{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 140px;
 }
 
-.services1{
+#services>div{
+    margin: 20px;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.205);
-}
-
-.services2{
-    padding: 10px;
+    min-height: 150px;
 }
 
 
@@ -273,13 +334,19 @@ a:hover{
     width: 400px;
     height: 500px;
     display: inline-block;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.8);
 }
 
 #footer{
     width: 100%;
     height: 60px;
-    background-color: rgb(180, 138, 0);
+    background-color: rgb(235, 169, 28);
     padding: 30px 0;
+}
+
+.fixed_bottom{
+    position: fixed;
+    bottom: 0;
 }
 
 #info{
@@ -287,7 +354,7 @@ a:hover{
 }
 
 #info a{
-    color: #4d95a5;
+    color: rgb(73, 87, 104);
 }
 
 .cursive{
@@ -326,44 +393,37 @@ a:hover{
         grid-template-columns: 1fr;
     }
 
-    #home{
+    .scrolled_nav{
+        height: 50px;
+    }
+
+    .reg_nav #home, .reg_nav_bg #home{
         text-align: center;
         font-size: 50px;
         padding-left: 0;
     }
 
-    /* #small_nav{
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        text-align: left;
-        height: 100vh;
-    } */
-    
-    /* #nav_icon{
-        width: 35px;
-        position: fixed;
-        top: 15px;
-        left: 15px;
-        z-index: 1;
-    } */
+    .scrolled_nav #home{
+        text-align: center;
+        font-size: 40px;
+        padding-left: 0; 
+    }
 
-    /* #small_nav{
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        text-align: left;
-    } */
+    .reg_nav #nav_icon, .reg_nav_bg #nav_icon{
+        width: 35px;
+    }
+
+    .scrolled_nav #nav_icon{
+        width: 30px;
+    }
     
     #nav_icon{
         display: inline-block;
-        width: 35px;
         position: fixed;
+        z-index: 1;
+        transition: 0.4s;
         left: 25px;
         top: 28px;
-        z-index: 1;
     }
 
     #links p:not(#home){
@@ -375,25 +435,19 @@ a:hover{
     }
 
     #small_nav:hover #dropdown{
-        width: 150px;
+        width: 160px;
         height: 100vh;
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: repeat(8, 5%);
         align-items: start;
-        background-color: rgb(180, 138, 0);
+        background: linear-gradient(rgba(235, 170, 28), rgb(73, 87, 104) 80%);
         position: absolute;
         left:0;
         top:0;
         padding: 70px 0 0 20px;
     }
 
-    #ad{
-        height: 375px;
-    }
-    #ad:hover #learn_more{
-        line-height: 375px;
-    }
 
     #quote{
     margin: 0 auto;
@@ -425,11 +479,9 @@ a:hover{
 }
 
 @media only screen and (max-width:600px) {
-    #ad{
-        height: 200px;
-    }
-    #ad:hover #learn_more{
-        line-height: 200px;
+    #quote{
+        /* font-size: 2em; */
+        padding-top: 15%;
     }
 
     #about{
@@ -441,4 +493,5 @@ a:hover{
         height: 50%;
         display: inline-block;
     }
+
 }
