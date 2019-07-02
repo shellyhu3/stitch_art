@@ -13,7 +13,7 @@
 
 <body>
 
-    <div id="nav">
+    <div id="nav" class="reg_nav">
         <div id="user">
 
             {% if this_user %}
@@ -25,7 +25,7 @@
         <div id="small_nav">
             <img src="{% static 'admin_app/nav_icon.png' %}" alt="Nav Icon" id="nav_icon">
             <div id="dropdown">
-                <a href="/about">About</a>
+                <a href="/#about">About</a>
                 <a href="/services">Services</a>
                 <a href="/shop">Shop</a>
                 <a href="/gallery">Gallery</a>
@@ -35,7 +35,7 @@
         <div id="links">
             
             <p id="home"><a href="/">Stitch Art</a></p>
-            <p><a href="/about">About</a></p>
+            <p><a href="/#about">About</a></p>
             <p><a href="/services">Services</a></p>
             <p><a href="/shop">Shop</a></p>
             <p><a href="/gallery">Gallery</a></p>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'admin_app/style.css' %}">
 </head>
 <body>
-    <div id="nav">
+    <div id="nav" class="reg_nav">
         <div id="user">
 
             {% if this_user %}
@@ -18,13 +18,24 @@
                 <a href="/logout">logout</a>
             {% endif %}
         </div>
-        <a href="/" id="home">Stitch Art</a>
+        <div id="small_nav">
+            <img src="{% static 'admin_app/nav_icon.png' %}" alt="Nav Icon" id="nav_icon">
+            <div id="dropdown">
+                <a href="/#about">About</a>
+                <a href="/services">Services</a>
+                <a href="/shop">Shop</a>
+                <a href="/gallery">Gallery</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
         <div id="links">
-            <a href="/about">About</a>
-            <a href="/services">Services</a>
-            <a href="/shop">Shop</a>
-            <a href="/gallery">Gallery</a>
-            <a href="/contact">Contact</a>
+            
+            <p id="home"><a href="/">Stitch Art</a></p>
+            <p><a href="/#about">About</a></p>
+            <p><a href="/services">Services</a></p>
+            <p><a href="/shop">Shop</a></p>
+            <p><a href="/gallery">Gallery</a></p>
+            <p><a href="/contact">Contact</a></p>
         </div>
     </div>
     <div id="container">

@@ -8,11 +8,13 @@
     <title>Servies - Stitch Art</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'admin_app/style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{% static 'admin_app/script.js' %}"></script>
 </head>
 
 <body>
 
-    <div id="nav">
+    <div id="nav" class="reg_nav">
         <div id="user">
 
             {% if this_user %}
@@ -24,7 +26,7 @@
         <div id="small_nav">
             <img src="{% static 'admin_app/nav_icon.png' %}" alt="Nav Icon" id="nav_icon">
             <div id="dropdown">
-                <a href="/about">About</a>
+                <a href="/#about">About</a>
                 <a href="/services">Services</a>
                 <a href="/shop">Shop</a>
                 <a href="/gallery">Gallery</a>
@@ -34,7 +36,7 @@
         <div id="links">
             
             <p id="home"><a href="/">Stitch Art</a></p>
-            <p><a href="/about">About</a></p>
+            <p><a href="/#about">About</a></p>
             <p><a href="/services">Services</a></p>
             <p><a href="/shop">Shop</a></p>
             <p><a href="/gallery">Gallery</a></p>
@@ -46,48 +48,42 @@
         <p class="yellow">**turnaround time varies (typically around 3-5 days for small orders)</p>
         <p class="yellow">**all custom orders are final</p>
         <div id="services">
-            <div class="services1">
-                <!-- <img src="{% static 'admin_app/embroidery.png' %}" alt="embroidery" class="service_icon"> -->
-                <div>
-                    <h3 class="cursive">Embroidery</h3>
-                    <ul>
-                        <li>one time set up fee</li>
-                        <li>up to 12 colors</li>
-                        <li>15" x 15" print area</li>
-                        <li>starting at $8</li>
-                    </ul>
-                </div>
+            <div>
+                <h3 class="cursive">Embroidery</h3>
+                <ul>
+                    <li>one time set up fee</li>
+                    <li>up to 12 colors</li>
+                    <li>15" x 15" print area</li>
+                    <li>starting at $8</li>
+                </ul>
             </div>
-            <div class="services2">
-                <div>
-                    <h3 class="cursive">Direct-to-Garment</h3>
-                    <ul>
-                        <li>no set up fee</li>
-                        <li>unlimited colors</li>
-                        <li>14" x 16" print area</li>
-                        <li>starting at $12</li>
-                    </ul>
-                </div>
-                <!-- <img src="{% static 'admin_app/dtg.png' %}" alt="embroidery" class="service_icon"> -->
+            <div>
+                <h3 class="cursive">Direct-to-Garment</h3>
+                <ul>
+                    <li>no set up fee</li>
+                    <li>unlimited colors</li>
+                    <li>14" x 16" print area</li>
+                    <li>starting at $12</li>
+                </ul>
             </div>
-            <div class="services1">
-                <!-- <img src="{% static 'admin_app/heatpress.png' %}" alt="embroidery" class="service_icon"> -->
-                <div>
-                    <h3 class="cursive">Heat Transfer</h3>
-                    <ul>
-                        <li>no set up fee</li>
-                        <li>starting at $7</li>
-                    </ul>
-                </div>
+            <div>
+                <h3 class="cursive">Heat Transfer</h3>
+                <ul>
+                    <li>no set up fee</li>
+                    <li>starting at $7</li>
+                </ul>
             </div>
-            <div class="services2">
-                <div>
-                    <h3 class="cursive">Screen Print</h3>
-                    <ul>
-                        <li>$35 per screen</li>
-                    </ul>
-                </div>
-                <!-- <img src="{% static 'admin_app/screenprint.png' %}" alt="embroidery" class="service_icon"> -->
+            <div>
+                <h3 class="cursive">Screen Print</h3>
+                <ul>
+                    <li>$35 per screen</li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer" class="fixed_bottom">
+            <div id="info">
+                <p>Questions? Need a quote?</p>
+                <p>Call us at <a href="tel:818-937-9828">(818) 937-9828</a> or email us at <a href="mailto:info@stitchartla.com">info@stitchartla.com</a></p>
             </div>
         </div>
 
