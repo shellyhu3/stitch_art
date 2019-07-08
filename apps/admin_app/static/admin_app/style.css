@@ -335,6 +335,7 @@ a:hover{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 15px;
+    margin-bottom: 150px;
 }
 
 .img{
@@ -634,6 +635,10 @@ a:hover{
     }
 
     #services{
+        margin-bottom: 0px;
+    }
+
+    .images{
         margin-bottom: 0px;
     }
 
