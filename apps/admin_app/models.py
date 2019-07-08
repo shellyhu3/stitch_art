@@ -20,7 +20,7 @@ class UserManager(models.Manager):
                 errors['email'] = "Please enter a valid email"
 
         if 'old_pw' and 'new_pw' and 'confirm_new_pw' in postData:
-            if len(postData['old_pw']) < 1:
+            if (len(postData['new_pw']) > 0 or len(postData['confirm_new_pw']) > 0) and len(postData['old_pw']) < 1:
                 errors['old_pw'] = "Please enter your old password"
             if len(postData['old_pw']) > 0:
                 this_user = User.objects.filter(id=postData['user_id'])

@@ -96,3 +96,35 @@ def contact(request):
         return render(request, "admin_app/contact.html", context)
     else:
         return render(request, "admin_app/contact.html")
+
+
+def account(request):
+    if 'user_id' in request.session:
+        context={
+            'this_user': User.objects.get(id=request.session['user_id'])
+        }
+        return render(request, "admin_app/account.html", context)
+    else:
+        return redirect('/')
+
+
+def update(request):
+    errors = User.objects.basic_validator(request.POST)
+    if len(errors)>0:
+        for key,value in errors.items():
+            messages.error(request, value, extra_tags=key)
+        print(errors)
+        return redirect('/account')
+    else:
+        edit_user = User.objects.get(id=request.session['user_id'])
+        if len(request.POST['old_pw']) < 1 and len(request.POST['new_pw']) < 1 and len(request.POST['confirm_new_pw']) <1:
+            edit_user.email = request.POST['newEmail']
+            edit_user.save()
+            messages.success(request, "Successfully updated")
+        else:
+            edit_user.email = request.POST['newEmail']
+            hashed_pw = bcrypt.hashpw(request.POST['new_pw'].encode(), bcrypt.gensalt())
+            edit_user.password = hashed_pw
+            edit_user.save()
+            messages.success(request, "Successfully updated")
+        return redirect('/account')

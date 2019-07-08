@@ -107,7 +107,7 @@ a:hover{
     letter-spacing: 0.3em;
 }
 
-#nav #user{
+#nav #user, #bg_nav #user{
     text-align: right;
     margin-right: 3%;
 }
@@ -127,10 +127,7 @@ a:hover{
 #links p:not(#home){
     text-transform: lowercase;
 }
-/* 
-#links a{
-    outline: 1px solid white;
-} */
+
 
 #home{
     font-family: 'Alex Brush', cursive;
@@ -152,6 +149,7 @@ a:hover{
     text-align: left;
     box-sizing: border-box;
     padding-top: 10%;
+    position: relative;
 }
 
 #quote p:nth-child(3){
@@ -162,12 +160,33 @@ a:hover{
     margin-left: 50%;
 }
 
+.arrow{
+    height: 15px;
+    width: 15px;
+    border: 1px solid white;
+    border-width: 1px 1px 0 0;
+    transform: rotate(135deg);
+    margin: 0 auto;
+}
 
-#ad{
+#arrows div:nth-child(1){
+    opacity: 0.3;
+}
+
+#arrows div:nth-child(2){
+    opacity: 0.6;
+}
+
+#arrows{
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+}
+
+#about{
     height: 600px;
     display: grid;
     align-items: center;
-    /* position: relative; */
     background-color: rgb(73, 87, 104);
 }
 
@@ -236,7 +255,7 @@ a:hover{
     transition-delay: 0.2s;
 }
 
-#about{
+#ad{
     width: 40%;
     margin: 0px auto;
     line-height: 2em;
@@ -245,14 +264,16 @@ a:hover{
 #services{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 140px;
+    grid-gap: 30px;
+    padding: 30px;
+    margin-bottom: 130px;
 }
 
 #services>div{
-    margin: 20px;
+    /* margin: 20px; */
     box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.8);
     background-color: rgba(0, 0, 0, 0.2);
-    padding: 10px;
+    /* padding: 10px; */
     min-height: 150px;
 }
 
@@ -304,19 +325,89 @@ a:hover{
 
 .delete_btn:hover{
     opacity: 0.6;
+    cursor: pointer;
 }
 
 .images{
+    padding: 15px;
+    box-sizing: border-box;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
 }
 
 .img{
-    width: 25vw;
+    width: 100%;
     height: 200px;
     object-fit: cover;
     position: relative;
+    cursor: pointer;
+}
+
+.img:hover{
+    filter: grayscale();
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.8);
+    transform: scale(1.01);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+
+/* Add Animation */
+.modal-content {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -328,6 +419,13 @@ a:hover{
     /* padding: 0px 0px 0px 10px; */
 }
 
+.contact_info{
+    line-height: 2em;
+}
+
+.indent{
+    padding-left: 16px;
+}
 
 #map{
     opacity: 0.7;
@@ -339,9 +437,12 @@ a:hover{
 
 #footer{
     width: 100%;
-    height: 60px;
+    height: 80px;
     background-color: rgb(235, 169, 28);
     padding: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 0.9em;
 }
 
 .fixed_bottom{
@@ -349,11 +450,23 @@ a:hover{
     bottom: 0;
 }
 
-#info{
-    text-align: center;
+.fixed_bottom_2{
+    position: fixed;
+    bottom: 0;
 }
 
-#info a{
+#footer div{
+    text-align: left;
+    margin: 0 auto;
+}
+
+#footer h4{
+    padding-bottom: 5px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+#footer p{
     color: rgb(73, 87, 104);
 }
 
@@ -380,9 +493,9 @@ a:hover{
 
 @media only screen and (max-width:900px) {
     /* For mobile phones: */
-    #container{
+    /* #container{
         padding-top: 5%;
-    }
+    } */
 
     #services{
       grid-template-columns: 1fr;
@@ -439,6 +552,7 @@ a:hover{
         height: 100vh;
         display: grid;
         grid-template-columns: 100%;
+        grid-row-gap: 10px;
         grid-template-rows: repeat(8, 5%);
         align-items: start;
         background: linear-gradient(rgba(235, 170, 28), rgb(73, 87, 104) 80%);
@@ -470,11 +584,15 @@ a:hover{
 
     .spacer{
         width: 100%;
-        height: 100px;
+        height: 150px;
     }
 
-    #about{
+    #ad{
         width: 80%;
+    }
+
+    .note{
+        padding: 0 10px;
     }
 }
 
@@ -484,7 +602,7 @@ a:hover{
         padding-top: 15%;
     }
 
-    #about{
+    #ad{
         padding-top: 30px;
     }
 
@@ -494,4 +612,32 @@ a:hover{
         display: inline-block;
     }
 
+    .images{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+    #footer{
+        grid-template-columns: 1fr;
+        height: 200px;
+    }
+    
+    #footer div{
+        margin: 0 0 0 50px;
+    }
+
+    .fixed_bottom{
+        position: static;
+    }
+
+    #services{
+        margin-bottom: 0px;
+    }
+
+    #img_upload{
+        width: 300px;
+    }
 }

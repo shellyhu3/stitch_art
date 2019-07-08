@@ -13,3 +13,23 @@ function scrollFunction(){
         $('#bg_nav').addClass('reg_nav_bg');
     }
 }
+
+$(document).ready(()=>{
+// Get the modal
+var modal = $("#myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var modalImg = $("#img01");
+$(".img").click((e) =>{
+    console.log(e.target)
+    modal.css('display','block');
+    modalImg.attr('src', e.target.src);
+})
+
+
+// When the user clicks on <span> (x), close the modal
+$('.close').click(() => { 
+    modal.css('display','none');
+})
+
+})

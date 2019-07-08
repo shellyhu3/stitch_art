@@ -7,6 +7,8 @@
     <title>Login - Stitch Art</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'admin_app/style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{% static 'admin_app/script.js' %}"></script>
 </head>
 <body>
     <div id="nav" class="reg_nav">
@@ -51,7 +53,7 @@
             {% endif %}
             <form action="/process_login" method="post">
                 {% csrf_token %}
-                <p>Email: <br><input type="text" name="email" class="form-control"></p>
+                <p>Email: <br><input type="text" name="email"></p>
                 {% if messages %}
                     {% for message in messages %}
                         {% if message.extra_tags == "email2" %}
@@ -59,7 +61,7 @@
                         {% endif %}
                     {% endfor %}
                 {% endif %}
-                <p>Password: <br><input type="password" name="pw" class="form-control"></p>
+                <p>Password: <br><input type="password" name="pw"></p>
                 <input type="submit" value="Log In" class="button">
             </form>
         </div>
