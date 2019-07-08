@@ -8,6 +8,7 @@
     <title>Home - Stitch Art</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'admin_app/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{% static 'admin_app/script.js' %}"></script>
 </head>
@@ -26,6 +27,11 @@
             <div id="small_nav">
                 <img src="{% static 'admin_app/nav_icon.png' %}" alt="Nav Icon" id="nav_icon">
                 <div id="dropdown">
+                    {% if this_user %}
+                        <p>Welcome Tracy!</p>
+                        <a href="/account">Manage Account</a>
+                        <a href="/logout">logout</a>
+                    {% endif %}
                     <a href="/#about">About</a>
                     <a href="/services">Services</a>
                     <a href="/shop">Shop</a>
@@ -49,9 +55,15 @@
                 <p>Custom garments.</p>
                 <p>You think it...</p>
                 <p>...We make it</p>
+
+                <div id="arrows">
+                    <div class="arrow"></div>
+                    <div class="arrow"></div>
+                    <div class="arrow"></div>
+                </div>
             </div>
-            <div id="ad">
-                <div id="about">
+            <div id="about">
+                <div id="ad">
                     <p><span class="bold">Stitch Art LA</span> is your source for custom t-shirts & personalized gifts! Since <span class="bold">2010</span>, Stitch Art has been the best source in <span class="bold">Glendale/Los Angeles</span> for screen printing, embroidery, photo transfers, stickers, direct-to-garment printing (DTG), and more.</p>
                     <p class="italic">Rush services available.</p>
                     <p class="italic">Unbeatable pricing, and quality guaranteed. </p>
@@ -60,9 +72,22 @@
                 </div>
             </div>
             <div id="footer">
-                <div id="info">
-                    <p>Questions? Need a quote?</p>
-                    <p>Call us at <a href="tel:818-937-9828">(818) 937-9828</a> or email us at <a href="mailto:info@stitchartla.com">info@stitchartla.com</a></p>
+                <div>
+                    <h4>Hours</h4>
+                    <p>Mon-Fri 10AM-6PM</p>
+                    <p>Sat-Sun CLOSED</p>
+                </div>
+                <div>
+                    <h4>Location</h4>
+                    <p>
+                        <i class="fa fa-map-marker fa-sm"></i> 6413 San Fernando Rd.<br>
+                        Glendale, CA 91201
+                    </p>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p><i class="fa fa-phone fa-sm"></i> <a href="tel:818-937-9828">(818) 937-9828</a></p>
+                    <p><i class="fa fa-envelope fa-sm"></i> <a href="mailto:info@stitchartla.com">info@stitchartla.com</a></p>
                 </div>
             </div>
         </div>

@@ -8,6 +8,8 @@
     <title>Gallery - Stitch Art</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'admin_app/style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{% static 'admin_app/script.js' %}"></script>
 </head>
 
 <body>
@@ -24,6 +26,11 @@
         <div id="small_nav">
             <img src="{% static 'admin_app/nav_icon.png' %}" alt="Nav Icon" id="nav_icon">
             <div id="dropdown">
+                {% if this_user %}
+                    <p>Welcome Tracy!</p>
+                    <a href="/account">Manage Account</a>
+                    <a href="/logout">logout</a>
+                {% endif %}
                 <a href="/#about">About</a>
                 <a href="/services">Services</a>
                 <a href="/shop">Shop</a>
@@ -76,6 +83,10 @@
                 {% for image in images reversed%}
                 <img src="{{ image.image }}" alt="{{image.image}}" class="img">
                 {% endfor %}
+            </div>
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
             </div>
         {% endif %}
 

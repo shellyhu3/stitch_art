@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact - Stitch Art</title>
+    <title>Account Info - Stitch Art</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'admin_app/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -51,22 +51,50 @@
     </div>
     <div id="container">
         <div class="spacer"></div>
-        <div id="contact">
-            <h3 class="cursive yellow">Store Hours:</h3> <p>MON - FRI 10 AM - 6 PM</p>
-            <h3 class="cursive yellow">Closed:</h3> <p>SAT & SUN</p>
-            <br>
-            <p class="contact_info"><i class="fa fa-phone fa-lg yellow"></i> <a href="tel:818-937-9828">(818) 937-9828</a></p>
-            <p class="contact_info"><i class="fa fa-envelope fa-lg yellow"></i> <a href="mailto:info@stitchartla.com">info@stitchartla.com</a></p>
-            <p class="contact_info"><i class="fa fa-instagram fa-lg yellow"></i> <a href="https://www.instagram.com/stitchartla">@stitchartla</a></p>
-
-            <p class="contact_info"><i class="fa fa-map-marker fa-lg yellow"></i> 6413 San Fernando Rd.
-                <br><span class="indent">Glendale, CA 91201</span></p>
-        </div>
-        <div id="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1650.6191010082814!2d-118.28948124418709!3d34.165827048186244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c0dae14868c1%3A0x9c48351350b96c7f!2sStitch+Art-T-shirt+Printing+%26+Embroidery!5e0!3m2!1sen!2sus!4v1553622623640"
-                width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.extra_tags == "success" %}
+                    <p class="yellow">{{message}}</p>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        <form action="/update" method="post">
+            {% csrf_token %}
+            {% if messages %}
+                {% for message in messages %}
+                    {% if message.extra_tags == "email" %}
+                        <p class="yellow">{{message}}</p>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            <p>Email: <input type="text" name="newEmail" value="{{this_user.email}}"></p>
+            {% if messages %}
+                {% for message in messages %}
+                    {% if message.extra_tags == "old_pw" %}
+                        <p class="yellow">{{message}}</p>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            <p>Old Password: <input type="text" name="old_pw"></p>
+            {% if messages %}
+                {% for message in messages %}
+                    {% if message.extra_tags == "new_pw" %}
+                        <p class="yellow">{{message}}</p>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            <p>New Password: <input type="text" name="new_pw"></p>
+            {% if messages %}
+                {% for message in messages %}
+                    {% if message.extra_tags == "confirm_new_pw" %}
+                        <p class="yellow">{{message}}</p>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            <p>Confirm Password: <input type="text" name="confirm_new_pw"></p>
+            <input type="hidden" name="user_id" value={{this_user.id}}>
+            <input type="submit" value="Update">        
+        </form>
 
     </div>
 </body>
