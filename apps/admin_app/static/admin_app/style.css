@@ -181,6 +181,14 @@ a:hover{
     width: 100%;
     position: absolute;
     bottom: 20px;
+    animation: 2s blinking infinite;
+    -webkit-animation: 2s blinking infinite;
+}
+
+@keyframes blinking{
+    50%{
+        opacity: 0;
+    }
 }
 
 #about{
@@ -489,6 +497,23 @@ a:hover{
 .yellow{
     color: rgb(235, 169, 28);
     letter-spacing: 2px;
+}
+
+.account_form{
+    margin: 0 auto;
+    text-align: left;
+    display: inline-block;
+}
+
+.account_form p{
+    display: table;
+}
+
+.account_form input{
+    width: 200px;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
 }
 
 

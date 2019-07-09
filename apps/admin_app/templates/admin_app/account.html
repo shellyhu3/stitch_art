@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Account Info - Stitch Art</title>
+    <title>Stitch Art - Account Info</title>
     {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'admin_app/favicon.png' %}"/>
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'admin_app/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -51,18 +52,11 @@
     </div>
     <div id="container">
         <div class="spacer"></div>
-        {% if messages %}
-            {% for message in messages %}
-                {% if message.extra_tags == "success" %}
-                    <p class="yellow">{{message}}</p>
-                {% endif %}
-            {% endfor %}
-        {% endif %}
-        <form action="/update" method="post">
+        <form action="/update" method="post" class="account_form">
             {% csrf_token %}
             {% if messages %}
                 {% for message in messages %}
-                    {% if message.extra_tags == "email" %}
+                    {% if message.tags == "success" %}
                         <p class="yellow">{{message}}</p>
                     {% endif %}
                 {% endfor %}
