@@ -13,6 +13,7 @@ html, body{
 #bg_img{
     background: url("/static/admin_app/thread.jpeg") no-repeat fixed;
     background-size: cover;
+    height: 100vh;
     font-family: 'Merriweather', sans-serif;
     font-size: 0.85em;
 }
@@ -91,7 +92,7 @@ a:hover{
 }
 
 
-#nav_icon, #dropdown{
+#nav_icon, .dropdown{
     display: none;
 }
 
@@ -442,6 +443,7 @@ a:hover{
     height: 500px;
     display: inline-block;
     box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.8);
+    margin-bottom: 30px;
 }
 
 #footer{
@@ -573,7 +575,22 @@ a:hover{
         display: none;
     }
 
-    #small_nav:hover #dropdown{
+    /* #small_nav:hover #dropdown{
+        width: 160px;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-row-gap: 10px;
+        grid-template-rows: repeat(8, 5%);
+        align-items: start;
+        background: linear-gradient(rgba(235, 170, 28), rgb(73, 87, 104) 80%);
+        position: absolute;
+        left:0;
+        top:0;
+        padding: 70px 0 0 20px;
+    } */
+
+    .show_dropdown{
         width: 160px;
         height: 100vh;
         display: grid;
@@ -587,7 +604,6 @@ a:hover{
         top:0;
         padding: 70px 0 0 20px;
     }
-
 
     #quote{
     margin: 0 auto;
