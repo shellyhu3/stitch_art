@@ -13,7 +13,6 @@ html, body{
 #bg_img{
     background: url("/static/admin_app/thread.jpeg") no-repeat fixed;
     background-size: cover;
-    height: 100vh;
     font-family: 'Merriweather', sans-serif;
     font-size: 0.85em;
 }
