@@ -24,9 +24,9 @@
                 <a href="/logout">logout</a>
             {% endif %}
         </div>
-        <div class="small_nav">
+        <div id="small_nav">
             <img src="{% static 'admin_app/nav_icon.png' %}" alt="Nav Icon" id="nav_icon">
-            <div id="dropdown">
+            <div class="dropdown">
                 {% if this_user %}
                     <p>Welcome Tracy!</p>
                     <a href="/account">Manage Account</a>
