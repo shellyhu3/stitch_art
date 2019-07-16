@@ -79,9 +79,9 @@ def upload(request):
             image = request.FILES['image']
             fs = FileSystemStorage()
             filename = fs.save(image.name, image)
-            uploaded_file_url = fs.url(filename)
-            Gallery.objects.create(image=uploaded_file_url)
-            # print(Gallery.objects.all().values())
+            # uploaded_file_url = fs.url(filename)
+            # Gallery.objects.create(image=uploaded_file_url)
+            Gallery.objects.create(image=filename)
         return redirect('/gallery')
 
 def delete_img(request):

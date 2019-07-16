@@ -69,7 +69,7 @@
             <div class="images">
                 {% for image in images reversed%}
                 <div class="image">
-                    <img src="{{ image.image }}" alt="{{image.image}}" class="img">
+                    <img src="/media/{{ image.image }}" alt="{{image.image}}" class="img">
                     <form action="/delete_img" method="post" class="delete_img">
                         {% csrf_token %}
                         <input type="hidden" name="image_id" value={{image.id}}>
@@ -82,7 +82,7 @@
 
             <div class="images">
                 {% for image in images reversed%}
-                <img src="{{ image.image }}" alt="{{image.image}}" class="img">
+                <img src="/media/{{ image.image }}" alt="{{image.image}}" class="img">
                 {% endfor %}
             </div>
             <div id="myModal" class="modal">

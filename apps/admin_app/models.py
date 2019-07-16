@@ -1,6 +1,10 @@
 from django.db import models
 import bcrypt
 import re
+import os
+from django.conf import settings
+from django.db.models.signals import post_delete
+from django.dispatch import receiver
 
 # Create your models here.
 class UserManager(models.Manager):
@@ -52,3 +56,9 @@ class Gallery(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = GalleryManager()
+
+    def delete(self, *args, **kwargs):
+        print(settings.MEDIA_ROOT)
+        self.image.delete()
+        super().delete(*args, **kwargs)
+
