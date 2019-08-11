@@ -495,6 +495,10 @@ a:hover{
     font-style: italic;
 }
 
+.underline{
+    text-decoration: underline;
+}
+
 .yellow{
     color: rgb(235, 169, 28);
     letter-spacing: 2px;
@@ -574,20 +578,6 @@ a:hover{
         display: none;
     }
 
-    /* #small_nav:hover #dropdown{
-        width: 160px;
-        height: 100vh;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-row-gap: 10px;
-        grid-template-rows: repeat(8, 5%);
-        align-items: start;
-        background: linear-gradient(rgba(235, 170, 28), rgb(73, 87, 104) 80%);
-        position: absolute;
-        left:0;
-        top:0;
-        padding: 70px 0 0 20px;
-    } */
 
     .show_dropdown{
         width: 160px;
