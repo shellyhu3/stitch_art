@@ -69,7 +69,7 @@
                     {% endif %}
                 {% endfor %}
             {% endif %}
-            <p>Old Password: <input type="text" name="old_pw"></p>
+            <p>Old Password: <input type="password" name="old_pw"></p>
             {% if messages %}
                 {% for message in messages %}
                     {% if message.extra_tags == "new_pw" %}
@@ -77,7 +77,7 @@
                     {% endif %}
                 {% endfor %}
             {% endif %}
-            <p>New Password: <input type="text" name="new_pw"></p>
+            <p>New Password: <input type="password" name="new_pw"></p>
             {% if messages %}
                 {% for message in messages %}
                     {% if message.extra_tags == "confirm_new_pw" %}
@@ -85,7 +85,7 @@
                     {% endif %}
                 {% endfor %}
             {% endif %}
-            <p>Confirm Password: <input type="text" name="confirm_new_pw"></p>
+            <p>Confirm Password: <input type="password" name="confirm_new_pw"></p>
             <input type="hidden" name="user_id" value={{this_user.id}}>
             <input type="submit" value="Update">        
         </form>
