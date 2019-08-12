@@ -117,13 +117,45 @@ a:hover{
 
 #links{
     display: grid;
+    display: -ms-grid;
     grid-template-columns: 5fr repeat(5, 1fr);
+    -ms-grid-columns: 5fr 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
+    -ms-grid-row-align: center;
     /* flex-wrap: nowrap; */
     /* align-content: center; */
     /* justify-content: space-evenly; */
     width: 100%;
     margin: 0 auto;
+}
+
+#links p:nth-child(1){
+    -ms-grid-column: 1;
+}
+
+#links p:nth-child(2){
+    -ms-grid-column: 2;
+    -ms-grid-row-align: center;
+}
+
+#links p:nth-child(3){
+    -ms-grid-column: 3;
+    -ms-grid-row-align: center;
+}
+
+#links p:nth-child(4){
+    -ms-grid-column: 4;
+    -ms-grid-row-align: center;
+}
+
+#links p:nth-child(5){
+    -ms-grid-column: 5;
+    -ms-grid-row-align: center;
+}
+
+#links p:nth-child(6){
+    -ms-grid-column: 6;
+    -ms-grid-row-align: center;
 }
 
 #links p:not(#home){
@@ -196,8 +228,15 @@ a:hover{
 #about{
     height: 600px;
     display: grid;
+    display: -ms-grid;
+    -ms-grid-rows: 1fr;
     align-items: center;
+    /* -ms-grid-row-align: center; */
     background-color: rgb(73, 87, 104);
+}
+
+#ad{
+    -ms-grid-row-align: center;
 }
 
 
@@ -273,10 +312,33 @@ a:hover{
 
 #services{
     display: grid;
+    display: -ms-grid;
     grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 30px 1fr;
+    -ms-grid-rows: 1fr 30px 1fr;
     grid-gap: 30px;
     padding: 30px;
     margin-bottom: 130px;
+}
+
+#services div:nth-child(1){
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+}
+
+#services div:nth-child(2){
+    -ms-grid-column: 3;
+    -ms-grid-row: 1;
+}
+
+#services div:nth-child(3){
+    -ms-grid-column: 1;
+    -ms-grid-row: 3;
+}
+
+#services div:nth-child(4){
+    -ms-grid-column: 3;
+    -ms-grid-row: 3;
 }
 
 #services>div{
@@ -453,8 +515,22 @@ a:hover{
     background-color: rgb(235, 169, 28);
     padding: 30px 0;
     display: grid;
+    display: -ms-grid;
     grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
     font-size: 0.9em;
+}
+
+#footer div:nth-child(1){
+    -ms-grid-column: 1;
+}
+
+#footer div:nth-child(2){
+    -ms-grid-column: 2;
+}
+
+#footer div:nth-child(3){
+    -ms-grid-column: 3;
 }
 
 .fixed_bottom{
