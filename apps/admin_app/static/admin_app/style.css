@@ -11,6 +11,11 @@ html, body{
     font-family: 'Merriweather', sans-serif;
 }
 
+#img_wrapper{
+    height: 100vh;
+    min-height: 600px;
+}
+
 #bg_img{
     background: url("/static/admin_app/thread.jpeg") no-repeat;
     /* background-attachment: fixed; */
