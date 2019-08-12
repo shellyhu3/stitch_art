@@ -8,13 +8,12 @@
 html, body{
     background-color: rgb(73, 87, 104);
     color: white;
+    font-family: 'Merriweather', sans-serif;
 }
 
 #bg_img{
     background: url("/static/admin_app/thread.jpeg") no-repeat fixed;
     background-size: cover;
-    font-family: 'Merriweather', sans-serif;
-    font-size: 0.85em;
 }
 
 #container{
@@ -22,7 +21,7 @@ html, body{
     margin: 0px auto;
     /* font-family: 'Lato', sans-serif; */
     text-align: center;
-    /* font-size: 0.8em; */
+    font-size: 0.9em;
     /* background-color: white; */
 }
 
@@ -40,6 +39,7 @@ html, body{
     top: 0;
     z-index: 1;
     transition: 0.4s;
+    font-size: .85em;
 }
 
 #bg_nav{
@@ -51,11 +51,12 @@ html, body{
     top: 0;
     z-index: 1;
     transition: 0.4s;
+    font-size: .85em;
 }
 
 .reg_nav_bg{
-    background: url("/static/admin_app/thread.jpeg") no-repeat fixed;
-    background-size: cover;
+    /* background: url("/static/admin_app/thread.jpeg") no-repeat fixed; */
+    /* background-size: cover; */
     height: 80px;
 }
 
@@ -145,7 +146,7 @@ a:hover{
     width: 400px;
     height: 100vh;
     min-height: 600px;
-    font-size: 3em;
+    font-size: 2.9em;
     text-align: left;
     box-sizing: border-box;
     padding-top: 10%;
@@ -281,13 +282,13 @@ a:hover{
     /* margin: 20px; */
     box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.8);
     background-color: rgba(0, 0, 0, 0.2);
-    /* padding: 10px; */
+    padding: 10px;
     min-height: 150px;
 }
 
 
 #services ul{
-    list-style-position: inside;
+    list-style-position: outside;
     display: inline-block;
 }
 
