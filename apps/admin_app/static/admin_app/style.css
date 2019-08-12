@@ -10,9 +10,21 @@ html, body{
     color: white;
     font-family: 'Merriweather', sans-serif;
     height: 100%;
+    width: 100%;
 }
 
-
+#bg_img{
+    background: url("/static/admin_app/thread.jpeg") no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    min-height: 600px;
+    height: 100%;
+    /* overflow: hidden; */
+    position: relative;
+}
 
 #container{
     width: 100%;
@@ -170,21 +182,17 @@ a:hover{
 }
 
 #quote{
-    margin: 0 auto;
-    width: 400px;
+    margin: 0;
+    width: 440px;
+    height: 100%;
     min-height: 600px;
     font-size: 2.9em;
     text-align: left;
     box-sizing: border-box;
     padding-top: 10%;
-    position: relative;
-    background: url("/static/admin_app/thread.jpeg") no-repeat;
-    /* background-attachment: fixed; */
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    height: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -220px;
 }
 
 #quote p:nth-child(3){
@@ -234,10 +242,8 @@ a:hover{
     align-items: center;
     /* -ms-grid-row-align: center; */
     background-color: rgb(73, 87, 104);
-}
-
-#ad{
-    -ms-grid-row-align: center;
+    text-align: center;
+    font-size: 0.9em;
 }
 
 
@@ -309,6 +315,7 @@ a:hover{
     width: 40%;
     margin: 0px auto;
     line-height: 2em;
+    -ms-grid-row-align: center;
 }
 
 #services{
@@ -602,7 +609,7 @@ a:hover{
 
 
 @media only screen and (min-width:900px) {
-    body{
+    #bg_img{
         background-attachment: fixed;
     }
 }
@@ -688,13 +695,16 @@ a:hover{
     #quote{
     margin: 0 auto;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     min-height: 600px;
     font-size: 3em;
     text-align: center;
-    box-sizing: border-box;
     padding-top: 10%;
+    position: absolute;
+    left: 0;
     }
+
+
 
     #quote p:nth-child(3){
         margin-left: 0;
