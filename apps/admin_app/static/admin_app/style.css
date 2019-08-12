@@ -605,6 +605,11 @@ a:hover{
     /* #container{
         padding-top: 5%;
     } */
+    #bg_img{
+        background-attachment: scroll;
+        -webkit-overflow-scrolling: touch;
+        height: 100vh;
+    }
 
     #services{
       grid-template-columns: 1fr;
@@ -705,13 +710,7 @@ a:hover{
     }
 }
 
-@media only screen and (max-width:600px) {
-    #bg_img{
-        background-attachment: scroll;
-        -webkit-overflow-scrolling: touch;
-        height: 100vh;
-    }
-    
+@media only screen and (max-width:600px) {    
     #quote{
         /* font-size: 2em; */
         padding-top: 15%;
