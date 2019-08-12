@@ -14,10 +14,8 @@ html, body{
 #bg_img{
     background: url("/static/admin_app/thread.jpeg") no-repeat;
     background-attachment: fixed;
-    -webkit-background-attachment: fixed;
-    -moz-background-attachment: fixed;
-    -ms-background-attachment: fixed;
     background-size: cover;
+    -webkit-background-size: cover;
     height: 100vh;
     overflow: hidden;
 }
@@ -120,17 +118,8 @@ a:hover{
 
 #links{
     display: grid;
-    -webkit-display: grid;
-    -moz-display: grid;
-    -ms-display: grid;
     grid-template-columns: 5fr repeat(5, 1fr);
-    -webkit-grid-template-columns: 5fr repeat(5, 1fr);
-    -moz-grid-template-columns: 5fr repeat(5, 1fr);
-    -ms-grid-template-columns: 5fr repeat(5, 1fr);
     align-items: center;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
     /* flex-wrap: nowrap; */
     /* align-content: center; */
     /* justify-content: space-evenly; */
@@ -208,13 +197,7 @@ a:hover{
 #about{
     height: 600px;
     display: grid;
-    -webkit-display: grid;
-    -moz-display: grid;
-    -ms-display: grid;
     align-items: center;
-    -webkit-alien-items: center;
-    -moz-alien-items: center;
-    -ms-alien-items: center;
     background-color: rgb(73, 87, 104);
 }
 
@@ -291,17 +274,8 @@ a:hover{
 
 #services{
     display: grid;
-    -webkit-display: grid;
-    -moz-display: grid;
-    -ms-display: grid;
     grid-template-columns: 1fr 1fr;
-    -webkit-grid-template-columns: 1fr 1fr;
-    -moz-grid-template-columns: 1fr 1fr;
-    -ms-grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
-    -webkit-grid-gap: 30px;
-    -moz-grid-gap: 30px;
-    -ms-grid-gap: 30px;
     padding: 30px;
     margin-bottom: 130px;
 }
@@ -370,17 +344,8 @@ a:hover{
     box-sizing: border-box;
     width: 100%;
     display: grid;
-    -webkit-display: grid;
-    -moz-display: grid;
-    -ms-display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    -webkit-grid-template-columns: 1fr 1fr 1fr 1fr;
-    -moz-grid-template-columns: 1fr 1fr 1fr 1fr;
-    -ms-grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 15px;
-    -webkit-grid-gap: 15px;
-    -moz-grid-gap: 15px;
-    -ms-grid-gap: 15px;
     margin-bottom: 150px;
 }
 
@@ -489,13 +454,7 @@ a:hover{
     background-color: rgb(235, 169, 28);
     padding: 30px 0;
     display: grid;
-    -webkit-display: grid;
-    -moz-display: grid;
-    -ms-display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    -webkit-grid-template-columns: 1fr 1fr 1fr;
-    -moz-grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-template-columns: 1fr 1fr 1fr;
     font-size: 0.9em;
 }
 
@@ -573,18 +532,12 @@ a:hover{
     } */
 
     #services{
-        grid-template-columns: 1fr;
-        -webkit-grid-template-columns: 1fr;
-        -moz-grid-template-columns: 1fr;
-        -ms-grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
     }
 
     #links{
         width: 100%;
         grid-template-columns: 1fr;
-        -webkit-grid-template-columns: 1fr;
-        -moz-grid-template-columns: 1fr;
-        -ms-grid-template-columns: 1fr;
     }
 
     .scrolled_nav{
@@ -633,25 +586,10 @@ a:hover{
         width: 160px;
         height: 100vh;
         display: grid;
-        -webkit-display: grid;
-        -moz-display: grid;
-        -ms-display: grid;
         grid-template-columns: 100%;
-        -webkit-grid-template-columns: 100%;
-        -moz-grid-template-columns: 100%;
-        -ms-grid-template-columns: 100%;
         grid-row-gap: 10px;
-        -webkit-row-grid-gap: 10px;
-        -moz-row-grid-gap: 10px;
-        -ms-row-grid-gap: 10px;
         grid-template-rows: repeat(8, 5%);
-        -webkit-grid-template-rows: (8, 5%);
-        -moz-grid-template-rows: (8, 5%);
-        -ms-grid-template-rows: (8, 5%);
         align-items: start;
-        -webkit-align-items: start;
-        -moz-align-items: start;
-        -ms-align-items: start;
         background: linear-gradient(rgba(235, 170, 28), rgb(73, 87, 104) 80%);
         position: absolute;
         left:0;
@@ -695,11 +633,8 @@ a:hover{
 @media only screen and (max-width:600px) {
     #bg_img{
         background-attachment: scroll;
-        -webkit-background-attachment: scroll;
-        -moz-background-attachment: scroll;
-        -ms-background-attachment: scroll;
     }
-
+    
     #quote{
         /* font-size: 2em; */
         padding-top: 15%;
@@ -717,9 +652,6 @@ a:hover{
 
     .images{
         grid-template-columns: 1fr 1fr;
-        -webkit-grid-template-columns: 1fr 1fr;
-        -moz-grid-template-columns: 1fr 1fr;
-        -ms-grid-template-columns: 1fr 1fr;
     }
 
     .modal-content {
@@ -728,9 +660,6 @@ a:hover{
 
     #footer{
         grid-template-columns: 1fr;
-        -webkit-grid-template-columns: 1fr;
-        -moz-grid-template-columns: 1fr;
-        -ms-grid-template-columns: 1fr;
         height: 200px;
     }
     
