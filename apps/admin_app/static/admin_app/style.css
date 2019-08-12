@@ -12,10 +12,9 @@ html, body{
 }
 
 #bg_img{
-    background: url("/static/admin_app/thread.jpeg") no-repeat;
-    background-attachment: fixed;
+    background: url("/static/admin_app/thread.jpeg") no-repeat center center fixed;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -630,10 +629,6 @@ a:hover{
 }
 
 @media only screen and (max-width:600px) {
-    #bg_img{
-        background-attachment: scroll;
-    }
-
     #quote{
         /* font-size: 2em; */
         padding-top: 15%;
