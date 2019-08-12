@@ -13,13 +13,13 @@ html, body{
 
 #bg_img{
     background: url("/static/admin_app/thread.jpeg") no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #container{
@@ -603,15 +603,23 @@ a:hover{
 }
 
 
+@media only screen and (min-width:900px) {
+    #bg_img{
+        background-attachment: fixed;
+    }
+}
+
+
 @media only screen and (max-width:900px) {
     /* For mobile phones: */
     /* #container{
         padding-top: 5%;
     } */
-    #bg_img{
+
+    /* #bg_img{
         background-attachment: scroll;
         -webkit-overflow-scrolling: touch;
-    }
+    } */
 
     #services{
       grid-template-columns: 1fr;
