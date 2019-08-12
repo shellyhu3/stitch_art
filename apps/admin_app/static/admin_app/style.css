@@ -13,6 +13,7 @@ html, body{
 
 #bg_img{
     background: url("/static/admin_app/thread.jpeg") no-repeat;
+    -webkit-background: url("/static/admin_app/thread.jpeg") no-repeat;
     background-attachment: fixed;
     -webkit-background-attachment: fixed;
     background-size: cover;
