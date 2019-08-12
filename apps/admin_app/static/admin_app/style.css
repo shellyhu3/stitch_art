@@ -424,6 +424,7 @@ a:hover{
     object-fit: cover;
     position: relative;
     cursor: pointer;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.8);
 }
 
 .img:hover{
