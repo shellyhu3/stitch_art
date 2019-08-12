@@ -708,6 +708,8 @@ a:hover{
 @media only screen and (max-width:600px) {
     #bg_img{
         background-attachment: scroll;
+        -webkit-overflow-scrolling: touch;
+        height: 100vh;
     }
     
     #quote{
