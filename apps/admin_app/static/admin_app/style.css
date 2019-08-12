@@ -13,11 +13,8 @@ html, body{
 
 #bg_img{
     background: url("/static/admin_app/thread.jpeg") no-repeat;
-    -webkit-background: url("/static/admin_app/thread.jpeg") no-repeat;
     background-attachment: fixed;
-    -webkit-background-attachment: fixed;
     background-size: cover;
-    -webkit-background-size: cover;
     height: 100vh;
     overflow: hidden;
 }
@@ -635,7 +632,7 @@ a:hover{
 @media only screen and (max-width:600px) {
     #bg_img{
         background-attachment: scroll;
-        -webkit-background-attachment: scroll;
+        -webkit-overflow-scrolling: touch;
     }
     
     #quote{
