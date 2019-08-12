@@ -15,84 +15,82 @@
 </head>
 
 <body>
-    <!-- <div id="bg_img"> -->
-        <div id="bg_nav" class="reg_nav_bg">
-            <div id="user">
+    <div id="bg_nav" class="reg_nav_bg">
+        <div id="user">
 
+            {% if this_user %}
+                Welcome Tracy! | 
+                <a href="/account">Manage Account</a> | 
+                <a href="/logout">logout</a>
+            {% endif %}
+        </div>
+        <div id="small_nav">
+            <img src="{% static 'admin_app/nav_icon.png' %}" alt="Nav Icon" id="nav_icon">
+            <div class="dropdown">
                 {% if this_user %}
-                    Welcome Tracy! | 
-                    <a href="/account">Manage Account</a> | 
+                    <p>Welcome Tracy!</p>
+                    <a href="/account">Manage Account</a>
                     <a href="/logout">logout</a>
                 {% endif %}
-            </div>
-            <div id="small_nav">
-                <img src="{% static 'admin_app/nav_icon.png' %}" alt="Nav Icon" id="nav_icon">
-                <div class="dropdown">
-                    {% if this_user %}
-                        <p>Welcome Tracy!</p>
-                        <a href="/account">Manage Account</a>
-                        <a href="/logout">logout</a>
-                    {% endif %}
-                    <a href="/#about">About</a>
-                    <a href="/services">Services</a>
-                    <a href="/shop">Shop</a>
-                    <a href="/gallery">Gallery</a>
-                    <a href="/contact">Contact</a>
-                </div>
-            </div>
-            <div id="links">
-                
-                <p id="home"><a href="/">Stitch Art</a></p>
-                <p><a href="/#about">About</a></p>
-                <p><a href="/services">Services</a></p>
-                <p><a href="/shop">Shop</a></p>
-                <p><a href="/gallery">Gallery</a></p>
-                <p><a href="/contact">Contact</a></p>
+                <a href="/#about">About</a>
+                <a href="/services">Services</a>
+                <a href="/shop">Shop</a>
+                <a href="/gallery">Gallery</a>
+                <a href="/contact">Contact</a>
             </div>
         </div>
-        <div id="container">
-            <div id="bg_img">
-                <div class="cursive" id="quote">
-                    <div class="spacer"></div>
-                    <p>Custom garments.</p>
-                    <p>You think it...</p>
-                    <p>...We make it</p>
+        <div id="links">
+            
+            <p id="home"><a href="/">Stitch Art</a></p>
+            <p><a href="/#about">About</a></p>
+            <p><a href="/services">Services</a></p>
+            <p><a href="/shop">Shop</a></p>
+            <p><a href="/gallery">Gallery</a></p>
+            <p><a href="/contact">Contact</a></p>
+        </div>
+    </div>
+    <div id="container">
+        <div id="bg_img">
+            <div class="cursive" id="quote">
+                <div class="spacer"></div>
+                <p>Custom garments.</p>
+                <p>You think it...</p>
+                <p>...We make it</p>
 
-                    <div id="arrows">
-                        <div class="arrow"></div>
-                        <div class="arrow"></div>
-                        <div class="arrow"></div>
-                    </div>
+                <div id="arrows">
+                    <div class="arrow"></div>
+                    <div class="arrow"></div>
+                    <div class="arrow"></div>
                 </div>
             </div>
-            <div id="about">
-                <div id="ad">
-                    <p><span class="bold">Stitch Art LA</span> is your source for custom t-shirts & personalization! Since <span class="bold">2010</span>, Stitch Art has been the best source in <span class="bold">Glendale/Los Angeles</span> for screen printing, embroidery, photo transfers, Tackle Twill, direct-to-garment printing (DTG), and more...</p>
-                    <p class="italic">Reasonable pricing, and quality guaranteed. </p>
-                    <br>
-                    <p class="italic">Rush services available.</p>
-                    <p class="italic bold">No job too big or too small...</p>
-                    <button id="learn_more"><a href="/services">Learn More</a></button>
-                </div>
+        </div>
+        <div id="about">
+            <div id="ad">
+                <p><span class="bold">Stitch Art LA</span> is your source for custom t-shirts & personalization! Since <span class="bold">2010</span>, Stitch Art has been the best source in <span class="bold">Glendale/Los Angeles</span> for screen printing, embroidery, photo transfers, Tackle Twill, direct-to-garment printing (DTG), and more...</p>
+                <p class="italic">Reasonable pricing, and quality guaranteed. </p>
+                <br>
+                <p class="italic">Rush services available.</p>
+                <p class="italic bold">No job too big or too small...</p>
+                <button id="learn_more"><a href="/services">Learn More</a></button>
             </div>
-            <div id="footer">
-                <div>
-                    <h4>Hours</h4>
-                    <p>Mon-Fri 10AM-6PM</p>
-                    <p>Sat-Sun CLOSED</p>
-                </div>
-                <div>
-                    <h4>Location</h4>
-                    <p>
-                        <i class="fa fa-map-marker fa-sm"></i> 6413 San Fernando Rd.<br>
-                        Glendale, CA 91201
-                    </p>
-                </div>
-                <div>
-                    <h4>Contact</h4>
-                    <p><i class="fa fa-phone fa-sm"></i> <a href="tel:818-937-9828">(818) 937-9828</a></p>
-                    <p><i class="fa fa-envelope fa-sm"></i> <a href="mailto:info@stitchartla.com">info@stitchartla.com</a></p>
-                </div>
+        </div>
+        <div id="footer">
+            <div>
+                <h4>Hours</h4>
+                <p>Mon-Fri 10AM-6PM</p>
+                <p>Sat-Sun CLOSED</p>
+            </div>
+            <div>
+                <h4>Location</h4>
+                <p>
+                    <i class="fa fa-map-marker fa-sm"></i> 6413 San Fernando Rd.<br>
+                    Glendale, CA 91201
+                </p>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p><i class="fa fa-phone fa-sm"></i> <a href="tel:818-937-9828">(818) 937-9828</a></p>
+                <p><i class="fa fa-envelope fa-sm"></i> <a href="mailto:info@stitchartla.com">info@stitchartla.com</a></p>
             </div>
         </div>
     </div>
