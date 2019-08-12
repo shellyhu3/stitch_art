@@ -9,18 +9,10 @@ html, body{
     background-color: rgb(73, 87, 104);
     color: white;
     font-family: 'Merriweather', sans-serif;
+    height: 100%;
 }
 
-body{
-    background: url("/static/admin_app/thread.jpeg") no-repeat;
-    /* background-attachment: fixed; */
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    height: 100vh;
-    /* overflow: hidden; */
-}
+
 
 #container{
     width: 100%;
@@ -180,13 +172,19 @@ a:hover{
 #quote{
     margin: 0 auto;
     width: 400px;
-    height: 100vh;
     min-height: 600px;
     font-size: 2.9em;
     text-align: left;
     box-sizing: border-box;
     padding-top: 10%;
     position: relative;
+    background: url("/static/admin_app/thread.jpeg") no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 100%;
 }
 
 #quote p:nth-child(3){
