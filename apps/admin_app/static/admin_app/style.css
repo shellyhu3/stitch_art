@@ -11,19 +11,14 @@ html, body{
     font-family: 'Merriweather', sans-serif;
 }
 
-#img_wrapper{
-    height: 100vh;
-    min-height: 600px;
-}
-
-#bg_img{
+body{
     background: url("/static/admin_app/thread.jpeg") no-repeat;
     /* background-attachment: fixed; */
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    height: 100%;
+    height: 100vh;
     /* overflow: hidden; */
 }
 
@@ -609,7 +604,7 @@ a:hover{
 
 
 @media only screen and (min-width:900px) {
-    #bg_img{
+    body{
         background-attachment: fixed;
     }
 }
