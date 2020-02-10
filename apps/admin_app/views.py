@@ -21,6 +21,7 @@ def admin(request):
         return render(request, "admin_app/login.html")
 
 def login(request):
+    print('info', request.POST)
     errors = User.objects.basic_validator(request.POST)
     if len(errors)>0:
         for key,value in errors.items():
@@ -47,14 +48,14 @@ def services(request):
     else:
         return render(request, "admin_app/services.html")
 
-def shop(request):
+def engraving(request):
     if 'user_id' in request.session:
         context={
             'this_user': User.objects.get(id=request.session['user_id'])
         }
-        return render(request, "admin_app/shop.html", context)
+        return render(request, "admin_app/engraving.html", context)
     else:
-        return render(request, "admin_app/shop.html")
+        return render(request, "admin_app/engraving.html")
 
 def gallery(request):
     if 'user_id' in request.session:
@@ -124,7 +125,7 @@ def update(request):
         else:
             edit_user.email = request.POST['newEmail']
             hashed_pw = bcrypt.hashpw(request.POST['new_pw'].encode(), bcrypt.gensalt())
-            edit_user.password = hashed_pw
+            edit_user.password = hashed_pw.decode()
             edit_user.save()
             messages.success(request, "Successfully updated")
         return redirect('/account')

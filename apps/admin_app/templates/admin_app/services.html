@@ -15,7 +15,6 @@
 </head>
 
 <body>
-
     <div id="nav" class="reg_nav">
         <div id="user">
 
@@ -35,59 +34,97 @@
                 {% endif %}
                 <a href="/#about">About</a>
                 <a href="/services">Services</a>
-                <a href="/shop">Shop</a>
+                <a href="/engraving">engraving</a>
                 <a href="/gallery">Gallery</a>
                 <a href="/contact">Contact</a>
             </div>
         </div>
+        <a id="home" href="/">Stitch Art</a>
         <div id="links">
-            
-            <p id="home"><a href="/">Stitch Art</a></p>
-            <p><a href="/#about">About</a></p>
-            <p><a href="/services">Services</a></p>
-            <p><a href="/shop">Shop</a></p>
-            <p><a href="/gallery">Gallery</a></p>
-            <p><a href="/contact">Contact</a></p>
+            <a href="/#about">About</a>
+            <a href="/services">Services</a>
+            <a href="/engraving">engraving</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/contact">Contact</a>
         </div>
     </div>
+
+
     <div id="container">
         <div class="spacer"></div>
+        <h1 class="cursive">Services</h1>
+
         <h2 class="cursive"><a class="yellow underline" href="mailto:info@stitchartla.com">Email</a> or <a class="yellow underline" href="tel:818-937-9828">Call</a> us for a quote</h2>
         <p class="yellow note">**turnaround time varies (typically around 3-5 days for small orders)</p>
         <p class="yellow note">**inquire about rush services</p>
         <p class="yellow note">**all custom orders are final</p>
         <div id="services">
             <div>
-                <h3 class="cursive">Embroidery</h3>
-                <ul>
-                    <li>one time set up fee for custom designs</li>
-                    <li>up to 12 colors</li>
-                    <li>15" x 15" print area</li>
-                    <li>starting at $9</li>
-                </ul>
+                <div class="engraving"></div>
+                <div class="service_info">
+                    <h3 class="cursive">Engraving</h3>
+                    <ul>
+                        <li>on wood, glass, metal, leather, etc.</li>
+                        <li>12" x 24" print area</li>
+                        <li>AI or EPS file or high resolution photo</li>
+                        <li>email files and details for quote</li>
+                        <button id="learn_more" onclick="window.location.href='/engraving'"><p>Learn More</p></button>
+                    </ul>
+                </div>
             </div>
             <div>
-                <h3 class="cursive">Direct-to-Garment</h3>
-                <ul>
-                    <li>no set up fee</li>
-                    <li>unlimited colors</li>
-                    <li>13" x 15" print area</li>
-                    <li>starting at $10 (light garment)<br>and $12 (dark garment)</li>
-                </ul>
+                <div class="embroidery"></div>
+                <div class="service_info">
+                    <h3 class="cursive">Embroidery</h3>
+                    <ul>
+                        <li>one time set up fee for custom designs</li>
+                        <li>up to 12 colors</li>
+                        <li>15" x 15" print area</li>
+                        <li>starting at $9</li>
+                    </ul>
+                </div>
             </div>
             <div>
-                <h3 class="cursive">Heat Transfer</h3>
-                <ul>
-                    <li>no set up fee</li>
-                    <li>AI or EPS file required</li>
-                    <li>starting at $7</li>
-                </ul>
+                <div class="dtg"></div>
+                <div class="service_info">
+                    <h3 class="cursive">Direct-to-Garment</h3>
+                    <ul>
+                        <li>no set up fee</li>
+                        <li>unlimited colors</li>
+                        <li>13" x 15" print area</li>
+                        <li>starting at $10 (light garment)<br>and $12 (dark garment)</li>
+                    </ul>
+                </div>
             </div>
             <div>
-                <h3 class="cursive">Screen Print</h3>
-                <ul>
-                    <li>$35 per screen</li>
-                </ul>
+                <div class="heat_transfer"></div>
+                <div class="service_info">
+                    <h3 class="cursive">Heat Transfer</h3>
+                    <ul>
+                        <li>no set up fee</li>
+                        <li>AI or EPS file required</li>
+                        <li>starting at $7</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="screen_print"></div>
+                <div class="service_info">
+                    <h3 class="cursive">Screen Print</h3>
+                    <ul>
+                        <li>$35 per screen</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="events"></div>
+                <div class="service_info">
+                    <h3 class="cursive">Events</h3>
+                    <ul>
+                        <li>on-site embroidery</li>
+                        <li>contact us for more info</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div id="footer" class="fixed_bottom">
@@ -98,15 +135,14 @@
             </div>
             <div>
                 <h4>Location</h4>
-                <p>
-                    <i class="fa fa-map-marker fa-sm"></i> 6413 San Fernando Rd.<br>
-                    Glendale, CA 91201
+                <p><i class="fa fa-map-marker fa-lg"></i> <a href="http://maps.google.com/?q=651 W Broadway, Glendale, California, 91204" target="_blank">651 W Broadway
+                    <br>Glendale, CA 91204</a>
                 </p>
             </div>
             <div>
                 <h4>Contact</h4>
-                <p><i class="fa fa-phone fa-sm"></i> <a class="underline" href="tel:818-937-9828">(818) 937-9828</a></p>
-                <p><i class="fa fa-envelope fa-sm"></i> <a class="underline" href="mailto:info@stitchartla.com">info@stitchartla.com</a></p>
+                <p><i class="fa fa-phone fa-sm"></i> <a href="tel:818-937-9828">(818) 937-9828</a></p>
+                <p><i class="fa fa-envelope fa-sm"></i> <a href="mailto:info@stitchartla.com">info@stitchartla.com</a></p>
             </div>
         </div>
 
