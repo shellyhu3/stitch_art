@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Stitch Art - Shop</title>
+    <title>Stitch Art - Engraving</title>
     {% load static %}
     <link rel="shortcut icon" type="image/png" href="{% static 'admin_app/favicon.png' %}"/>
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'admin_app/style.css' %}">
@@ -35,27 +35,48 @@
                 {% endif %}
                 <a href="/#about">About</a>
                 <a href="/services">Services</a>
-                <a href="/shop">Shop</a>
+                <a href="/engraving">engraving</a>
                 <a href="/gallery">Gallery</a>
                 <a href="/contact">Contact</a>
             </div>
         </div>
+        <a id="home" href="/">Stitch Art</a>
         <div id="links">
-            
-            <p id="home"><a href="/">Stitch Art</a></p>
-            <p><a href="/#about">About</a></p>
-            <p><a href="/services">Services</a></p>
-            <p><a href="/shop">Shop</a></p>
-            <p><a href="/gallery">Gallery</a></p>
-            <p><a href="/contact">Contact</a></p>
+            <a href="/#about">About</a>
+            <a href="/services">Services</a>
+            <a href="/engraving">engraving</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/contact">Contact</a>
         </div>
     </div>
 
     <div id="container">
         <div class="spacer"></div>
-        <p id="soon">Online shop coming soon...</p>
+        <div id="engraving">
+            <h1 class="cursive title"><span>Engraving</span></h1>
+            <h2 class="cursive">What can you engrave on?</h2>
 
-        <div id="footer" class="fixed_bottom_2">
+            <div id="engrave_what">
+                <div id="engrave_img_1">
+                    <h4>leather</h4>
+                </div>
+                <div id="engrave_img_2">
+                    <h4>wood</h4>
+                </div>
+                <div id="engrave_img_3">
+                    <h4>metal</h4>
+                </div>
+                <div id="engrave_img_4">
+                    <h4>and more...</h4>
+                </div>
+            </div>
+            <h2 class="cursive">Want to know more?</h2>
+            <p>Email us with the items/material you want to engrave on and the image you want to engrave</p>
+            <br>
+            <h2 class="cursive">More info coming soon...</h2>
+        </div>
+
+        <div id="footer" class="fixed_bottom">
             <div>
                 <h4>Hours</h4>
                 <p>Mon-Fri 10AM-6PM</p>
@@ -63,15 +84,14 @@
             </div>
             <div>
                 <h4>Location</h4>
-                <p>
-                    <i class="fa fa-map-marker fa-sm"></i> 6413 San Fernando Rd.<br>
-                    Glendale, CA 91201
+                <p><i class="fa fa-map-marker fa-lg"></i> <a href="http://maps.google.com/?q=651 W Broadway, Glendale, California, 91204" target="_blank">651 W Broadway
+                    <br>Glendale, CA 91204</a>
                 </p>
             </div>
             <div>
                 <h4>Contact</h4>
-                <p><i class="fa fa-phone fa-sm"></i> <a class="underline" href="tel:818-937-9828">(818) 937-9828</a></p>
-                <p><i class="fa fa-envelope fa-sm"></i> <a class="underline" href="mailto:info@stitchartla.com">info@stitchartla.com</a></p>
+                <p><i class="fa fa-phone fa-sm"></i> <a href="tel:818-937-9828">(818) 937-9828</a></p>
+                <p><i class="fa fa-envelope fa-sm"></i> <a href="mailto:info@stitchartla.com">info@stitchartla.com</a></p>
             </div>
         </div>
     </div>

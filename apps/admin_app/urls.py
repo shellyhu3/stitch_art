@@ -7,7 +7,7 @@ urlpatterns = [
     url(r'^process_login$', views.login),
     url(r'^logout', views.logout),
     url(r'^services$', views.services),
-    url(r'^shop$', views.shop),
+    url(r'^engraving$', views.engraving),
     url(r'^gallery$', views.gallery),
     url(r'^delete_img$', views.delete_img),
     url(r'^upload$', views.upload),

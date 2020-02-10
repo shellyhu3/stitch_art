@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'apps.admin_app',
+    'sass_processor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -120,7 +121,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder',
+]
 
 # Image upload
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
