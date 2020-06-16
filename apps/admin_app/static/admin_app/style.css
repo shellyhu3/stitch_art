@@ -1,25 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Alex+Brush|Lato:300|Merriweather:300&display=swap");
-#attn {
-  background-color: #e5a23db9;
-  position: absolute;
-  top: 100px;
+#banner {
   width: 100%;
+  padding: 1em;
+  position: relative;
+  z-index: 1;
+  background-color: #e5a23d;
   text-align: center;
-}
-
-@media only screen and (max-width: 900px) {
-  #attn h3 {
-    font-size: 1.5em;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  #attn h3 {
-    font-size: 1.2em;
-  }
-  #attn p {
-    font-size: 0.8em;
-  }
+  color: #495768;
+  font-weight: bold;
 }
 
 * {
@@ -37,22 +25,28 @@ html, body {
 
 #bg_img {
   background: url("/static/admin_app/thread.jpeg") no-repeat;
-  background-attachment: fixed;
+  position: absolute;
+  top: 0;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   min-height: 600px;
-  position: relative;
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  #bg_img {
+    min-height: 800px;
+  }
 }
 
 #container {
   width: 100%;
   margin: 0px auto;
   text-align: center;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 .spacer {
@@ -77,14 +71,12 @@ p {
 
 #nav, #bg_nav {
   text-align: center;
-  position: fixed;
   margin: 0px auto;
   width: 100%;
-  top: 0;
   z-index: 1;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  font-size: .85em;
+  font-size: 1em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -108,8 +100,19 @@ p {
   }
 }
 
+.reg_nav_bg {
+  position: relative;
+  z-index: 1;
+}
+
 .reg_nav {
   background-color: #495768;
+  position: fixed;
+}
+
+.fixed_nav {
+  position: fixed;
+  top: 0;
 }
 
 #home {
@@ -142,7 +145,7 @@ p {
 @media only screen and (max-width: 900px) {
   .scrolled_nav #nav_icon {
     width: 30px;
-    top: 12px;
+    top: 1em;
   }
 }
 
@@ -157,12 +160,12 @@ p {
 @media only screen and (max-width: 900px) {
   #nav_icon {
     display: inline-block;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     -webkit-transition: 0.4s;
     transition: 0.4s;
     left: 25px;
-    top: 20px;
+    top: 2em;
     width: 35px;
   }
 }
@@ -206,7 +209,7 @@ p {
 
 @media only screen and (max-width: 900px) {
   .show_dropdown {
-    width: 220px;
+    width: 85%;
     height: 100vh;
     display: -ms-grid;
     display: grid;
@@ -222,19 +225,31 @@ p {
     position: absolute;
     left: 0;
     top: 0;
-    padding: 70px 0 0 20px;
+    padding: 5em 0 0 3em;
+    text-align: left;
+    -webkit-box-shadow: 0.5em 0.5em 3em rgba(0, 0, 0, 0.5);
+            box-shadow: 0.5em 0.5em 3em rgba(0, 0, 0, 0.5);
   }
 }
 
 #quote {
   width: 100%;
   height: 100%;
-  min-height: 600px;
+  min-height: 800px;
   text-align: left;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-top: 23%;
-  position: absolute;
+  font-size: 1.4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #quote h3:nth-child(1) {
@@ -251,7 +266,7 @@ p {
 
 @media only screen and (max-width: 900px) {
   #quote {
-    padding-top: 45vh;
+    margin-top: 2em;
   }
   #quote h3:nth-child(n) {
     margin-left: 0;
@@ -307,7 +322,7 @@ p {
           align-items: center;
   background-color: #495768;
   text-align: center;
-  font-size: 0.9em;
+  font-size: 1em;
   width: 40%;
   margin: 0px auto;
   line-height: 2em;
@@ -403,12 +418,13 @@ p {
 #footer {
   width: 100%;
   background-color: #e5a23d;
-  padding: 30px 0;
+  padding: 3em 0;
   display: grid;
   display: -ms-grid;
   grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-columns: 1fr 1fr 1fr;
-  font-size: 0.9em;
+  font-size: 1em;
+  margin-top: 1em;
 }
 
 #footer div {
@@ -418,9 +434,9 @@ p {
 
 #footer h4 {
   padding-bottom: 5px;
-  font-weight: normal;
+  font-weight: bold;
   text-transform: uppercase;
-  font-size: 0.9em;
+  font-size: 1em;
   color: #495768;
 }
 
@@ -428,7 +444,7 @@ p {
   #footer {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    grid-gap: 15px;
+    grid-gap: 2em;
   }
   #footer div {
     margin: 0 0 0 50px;
@@ -464,7 +480,6 @@ p {
   -ms-grid-rows: 1fr 30px 1fr;
   grid-gap: 30px;
   padding: 30px;
-  margin-bottom: 130px;
 }
 
 #services > div {
@@ -502,54 +517,58 @@ p {
   }
   #services > div {
     min-height: 275px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
   #services ul {
-    padding-left: 5px;
+    padding: 1.5em;
   }
 }
 
 .embroidery {
   background: url("./embroidery.jpg") no-repeat;
   background-size: cover;
+  min-height: 17em;
   background-position: center;
 }
 
 .engraving {
   background: url("./engraving_cropped.jpg") no-repeat;
   background-size: cover;
+  min-height: 17em;
   background-position: top;
 }
 
 .dtg {
   background: url("./dtg.jpg") no-repeat;
   background-size: cover;
+  min-height: 17em;
   background-position: top;
 }
 
 .heat_transfer {
   background: url("./vinyl.jpg") no-repeat;
   background-size: cover;
+  min-height: 17em;
   background-position: top;
 }
 
 .screen_print {
   background: url("./screen_printing.jpeg") no-repeat;
   background-size: cover;
+  min-height: 17em;
   background-position: top;
 }
 
 .events {
   background: url("./events.jpg") no-repeat;
   background-size: cover;
+  min-height: 17em;
   background-position: center;
 }
 
 .service_info {
   padding-top: 10px;
-}
-
-#engraving {
-  margin-bottom: 130px;
 }
 
 #engraving h2 {
@@ -669,7 +688,6 @@ p {
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 15px;
-  margin-bottom: 150px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -789,6 +807,7 @@ p {
   width: 300px;
   vertical-align: top;
   text-align: left;
+  margin-top: 2em;
   /* padding: 0px 0px 0px 10px; */
 }
 
@@ -807,7 +826,7 @@ p {
   display: inline-block;
   -webkit-box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.8);
           box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.8);
-  margin-bottom: 30px;
+  margin: 2em 0;
 }
 
 @media only screen and (max-width: 600px) {
