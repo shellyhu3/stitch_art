@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'mp&zk@4qa9kkyr0mv97n+v5*kf^+ir+tevvop#9fsagv-!t23&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['stitchartla.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
