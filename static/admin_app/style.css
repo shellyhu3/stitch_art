@@ -571,6 +571,10 @@ p {
   padding-top: 10px;
 }
 
+.notice {
+  margin: 1em 0;
+}
+
 #engraving h2 {
   font-weight: normal;
 }
@@ -858,6 +862,10 @@ p {
 .yellow {
   color: #eba91c;
   letter-spacing: 2px;
+}
+
+.red {
+  color: #ff1818;
 }
 
 .title {
